@@ -375,9 +375,11 @@ class ESenseProvider with ChangeNotifier {
                   )),
               const SizedBox(height: 8),
               Text(
-                  'Head Movement: ${(metrics['avgMovement'] ?? 0 * 100).toStringAsFixed(1)}%'),
+                'Head Movement: ${((metrics['avgMovement'] ?? 0) * 100).toStringAsFixed(1)}%',
+              ),
               Text(
-                  'Head Rotation: ${(metrics['avgRotation'] ?? 0 * 100).toStringAsFixed(1)}%'),
+                'Head Rotation: ${((metrics['avgRotation'] ?? 0) * 100).toStringAsFixed(1)}%',
+              ),
               const Divider(),
               Text(
                 'Feedback: ${_getFeedback(metrics)}',
